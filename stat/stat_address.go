@@ -117,7 +117,7 @@ func (sa *StatAddress) statByTimeRange(tr TimeRange) (*store.AddressStat, error)
 
 	return &store.AddressStat{
 		StatTime:   tr.start,
-		StatType:   sa.statType,
+		StatType:   tr.intervalType,
 		AddrCount:  delta,
 		AddrActive: 0,
 		AddrTotal:  total + delta,
